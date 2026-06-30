@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBO System | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black">
+
+    <header>
+        <nav>
+            <div class="logo"><strong>PORTFOLIO</strong></div>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container pt-nav project-header">
+        <a href="index.html#projects" class="back-link">← Back to Projects</a>
+        
+        <div class="tech-tags">
+            <span class="tag" style="color: #3b82f6; border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.1);">Completed 2026</span>
+            <span class="tag">PCB Design</span>
+            <span class="tag">Hardware</span>
+            <span class="tag">Medical Tech</span>
+        </div>
+
+        <h1>EMBO System</h1>
+        <p class="text-grey" style="max-width: 800px; font-size: 1.1rem;">
+            An automated precision preparation and characterisation system for embolisation agents. Engineered to streamline medical workflows by providing inline ultrasonic characterization during Gelfoam slurry comminution, ensuring consistent particle size and distribution.
+        </p>
+
+        <a href="https://github.com/markantosa/embo" target="_blank" class="btn-outline">
+            View on GitHub
+        </a>
+    </section>
+
+    <section class="container" style="padding-top: 0; padding-bottom: 2rem;">
+        <div class="hero-image-large">
+            <img src="photos/photo_2026-06-25_21-09-54.jpg" alt="EMBO System Hardware">
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+        <div class="specs-container">
+            <h3 class="specs-title">Overall Specifications</h3>
+            <div class="specs-grid">
+                
+                <div class="spec-item">
+                    <h4>Core Function</h4>
+                    <p>Automated comminution (mixing and breakdown) of Gelfoam slurry for precise embolisation agent preparation.</p>
+                </div>
+
+                <div class="spec-item">
+                    <h4>Sensing & Feedback</h4>
+                    <p>Inline ultrasonic characterization to measure attenuation coefficients and accurately estimate particle size during mixing.</p>
+                </div>
+
+                <div class="spec-item">
+                    <h4>Control Electronics</h4>
+                    <p>Custom-designed PCB to interface with ultrasonic transducers, manage motor controls, and process high-frequency sensor data.</p>
+                </div>
+
+                <div class="spec-item">
+                    <h4>Clinical Impact</h4>
+                    <p>Reduces human error and variability in manual preparation, ensuring a standardized, repeatable output for medical procedures.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+             <div class="section-header" style="margin-bottom: 2rem; text-align: center;">
+            <h2>Electric Architecture</h2>
+            </div>
+             <div> <h4 style="color: #ffffff; font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.5px;">Main PCB</h4> </div>   
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic1.png" alt="Electrical Hardware Setup 1" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p style="color: #a1a1aa; font-size: 0.95rem; line-height: 1.5; text-align: center;">Power distribution from 24v (motor) to 5v (UAS) and 3.3v (Logic)</p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic2.png" alt="Electrical Hardware Setup 2" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p style="color: #a1a1aa; font-size: 0.95rem; line-height: 1.5; text-align: center;">Ultrasonic Attenuation Spectroscopy</p>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic3.png" alt="Electrical Hardware Setup 3" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p style="color: #a1a1aa; font-size: 0.95rem; line-height: 1.5; text-align: center;">The analog front-end designed to capture high-frequency attenuation data with minimal noise.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic4.png" alt="Electrical Hardware Setup 4" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p style="color: #a1a1aa; font-size: 0.95rem; line-height: 1.5; text-align: center;">The core processing unit layout, highlighting the data lines reserved for external communication.</p>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <ul style="list-style-position: outside; margin-left: 1.5rem;">
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">ESP32-S3 Main Controller:</strong> Controls the full system, including puzzle detection, solenoid dispensing, and communication with the web-based UI.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">PCF8574 I2C GPIO Expander:</strong> Expands the ESP32-S3’s available pins to connect multiple LDR sensors.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">LDR Detection Matrix:</strong> Each puzzle slot uses an LDR to sense light changes. When a piece blocks the light, the system detects it as placed; when light reaches the sensor, it detects that the piece is removed.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Solenoids (6V, 2A):</strong> Solenoids are used to physically release the puzzle pieces into the tray when a task is assigned.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">FQP30N06L N-channel MOSFET:</strong> Acts as a high-current switch, allowing the ESP32-S3 to safely control the 6V 2A solenoids without powering them directly.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">1N4007 flyback diode:</strong> Solenoids are inductive loads that create a dangerous voltage spike when switched off. A flyback diode is placed across each solenoid to absorb this kickback and protect the ESP32-S3 from electrical damage.
+                    </li>
+                    <li class="text-grey" style="text-align: justify;">
+                        <strong style="color: #ffffff;">100µF decoupling capacitor:</strong> Decoupling capacitors are added near the solenoid power circuits to smooth out sudden current drops when the solenoids activate, keeping the logic-level electronics stable.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
