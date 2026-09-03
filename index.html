@@ -27,14 +27,45 @@
                 <p class="text-grey">I learn engineering by building things, testing them, failing, improving, and figuring out how systems work along the way.</p>
                 <a href="#projects" class="btn-solid">View Projects</a>
             </div>
-            <div class="hero-image animated-asset">
-                <div class="tech-circle circle-1"></div>
-                <div class="tech-circle circle-2"></div>
-                <div class="tech-circle circle-3">
-                    <div class="tech-node"></div>
-                </div>
-                <div class="tech-center">
-                    <span>SYS.READY</span>
+            <div class="hero-image">
+                <div class="scope-rig">
+                    <div class="scope" id="scope">
+                        <div class="scope-screen">
+                            <svg class="scope-grid" viewBox="0 0 300 200" preserveAspectRatio="none">
+                                <g stroke="rgba(0,255,200,0.12)" stroke-width="1">
+                                    <line x1="0" y1="33" x2="300" y2="33"></line>
+                                    <line x1="0" y1="66" x2="300" y2="66"></line>
+                                    <line x1="0" y1="100" x2="300" y2="100"></line>
+                                    <line x1="0" y1="133" x2="300" y2="133"></line>
+                                    <line x1="0" y1="166" x2="300" y2="166"></line>
+                                    <line x1="37.5" y1="0" x2="37.5" y2="200"></line>
+                                    <line x1="75" y1="0" x2="75" y2="200"></line>
+                                    <line x1="112.5" y1="0" x2="112.5" y2="200"></line>
+                                    <line x1="150" y1="0" x2="150" y2="200"></line>
+                                    <line x1="187.5" y1="0" x2="187.5" y2="200"></line>
+                                    <line x1="225" y1="0" x2="225" y2="200"></line>
+                                    <line x1="262.5" y1="0" x2="262.5" y2="200"></line>
+                                </g>
+                            </svg>
+
+                            <svg class="scope-wave" viewBox="0 0 300 200" preserveAspectRatio="none">
+                                <path id="wavePath" fill="none" stroke="#39ffc9" stroke-width="2.5" stroke-linecap="round"></path>
+                                <path id="wavePath2" fill="none" stroke="#ff5fd8" stroke-width="1.5" stroke-linecap="round" opacity="0.55"></path>
+                            </svg>
+
+                            <div class="dog-frame" id="dogFrame">
+                                <img src="photos/bleki.jpg" alt="Bleki the good boy">
+                                <div class="crt-overlay"></div>
+                            </div>
+
+                            <div class="scanlines"></div>
+                        </div>
+
+                        <div class="scope-panel">
+                            <div class="scope-readout" id="scopeReadout">FREQ: 1.21 HZ &mdash; STATUS: NOMINAL</div>
+                            <div class="scope-led"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,34 +89,88 @@
 
                 <a href="haneboard.html" class="project-card">
                     <div class="project-img">
-                        <img src="photos/haneboard.png" alt="Hane Board">
+                        <img src="photos/haneboard/haneboard.png" alt="Hane Board">
                         <div class="card-overlay"><span class="overlay-text">View Build</span></div>
                     </div>
                     <h3 class="project-title">Hane Board</h3>
                     <p class="text-grey">Puzzle training system for neurodivergent workers.</p>
                 </a>
-                <a href="six_eyes.html">
-                <div class="project-card">
-                    <div class="project-img placeholder-box">
-                        <span>CV System Active</span>
-                    </div>
-                    <h3 class="project-title">Six Eyes</h3>
-                    <p class="text-grey">The SixEyes is an open-source
-                        ,low-cost 3D-printable 6-degree-of-freedom robotic arm platform designed for VLA inference</p>
-                </div>
-                </a>
                 <a href="embo.html" class="project-card">
                     <div class="project-img">
-                        <img src="photos/haneboard.png" alt="Hane Board">
+                        <img src="photos/embo/cover.jpg" alt="EMBO System">
                         <div class="card-overlay"><span class="overlay-text">View Build</span></div>
                     </div>
                     <h3 class="project-title">EMBO </h3>
-                    <p class="text-grey">A medical device prototype that automates the mixing of embolic agents to ensure consistent 
+                    <p class="text-grey">A medical device prototype that automates the mixing of embolic agents to ensure consistent
                         particle size distribution and viscosity
                     </p>
+                </a>
+
+                <a href="https://odriyy.github.io/EM-FM-2D/" target="_blank" class="project-card">
+                    <div class="project-img">
+                        <img src="photos/emfm2d/setup.jpg" alt="Hydroponic EC Sensor">
+                        <div class="card-overlay"><span class="overlay-text">View Project</span></div>
+                    </div>
+                    <h3 class="project-title">Hydroponic EC Sensor</h3>
+                    <p class="text-grey">A flexible, non-invasive RF sensor that wraps around a pipe to monitor nutrient conductivity in hydroponics.</p>
                 </a>
             </div>
         </div>
     </section>
+
+    <script>
+        (function () {
+            var wavePath = document.getElementById('wavePath');
+            var wavePath2 = document.getElementById('wavePath2');
+            var readout = document.getElementById('scopeReadout');
+            var dogFrame = document.getElementById('dogFrame');
+
+            var t = 0;
+
+            var readouts = [
+                'FREQ: 1.21 HZ &mdash; STATUS: NOMINAL',
+                'AMPL: 2.4V &mdash; STATUS: SIGNAL LOCKED',
+                'FREQ: 0.98 HZ &mdash; STATUS: GOOD BOY ADJACENT',
+                'FREQ: 100% BARK &mdash; STATUS: NOMINAL'
+            ];
+
+            function buildWave(time, amp, freq, speed, wobble) {
+                var points = [];
+                for (var x = 0; x <= 300; x += 5) {
+                    var progress = x / 300;
+                    var y = 100
+                        + amp * Math.sin(progress * Math.PI * freq + time * speed)
+                        + wobble * Math.sin(progress * Math.PI * freq * 2.7 + time * speed * 1.6);
+                    points.push(x + ',' + y.toFixed(1));
+                }
+                return 'M' + points.join(' L');
+            }
+
+            function waveY(time, amp, freq, speed, wobble, progress) {
+                return 100
+                    + amp * Math.sin(progress * Math.PI * freq + time * speed)
+                    + wobble * Math.sin(progress * Math.PI * freq * 2.7 + time * speed * 1.6);
+            }
+
+            function tick() {
+                t += 0.045;
+                wavePath.setAttribute('d', buildWave(t, 30, 4, 1, 6));
+                wavePath2.setAttribute('d', buildWave(t + 1.3, 20, 5, -0.7, 9));
+
+                // Ride the main wave's own height at the screen's centre so Bleki tracks it directly
+                var dogY = waveY(t, 30, 4, 1, 6, 0.5);
+                var tilt = waveY(t + 0.05, 30, 4, 1, 6, 0.5) - dogY;
+                dogFrame.style.top = (dogY / 200 * 100) + '%';
+                dogFrame.style.transform = 'translate(-50%, -50%) rotate(' + (tilt * 1.5) + 'deg)';
+
+                requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+
+            setInterval(function () {
+                readout.innerHTML = readouts[Math.floor(Math.random() * readouts.length)];
+            }, 2200);
+        })();
+    </script>
 </body>
 </html>
