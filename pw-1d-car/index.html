@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubber-Band Racer | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=5">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>PORTFOLIO</strong></div>
+            <div class="nav-links">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container pt-nav project-header">
+        <a href="../index.html#projects" class="back-link">
+            <span>&larr;</span> Back to Projects
+        </a>
+
+        <h1>Rubber-Band Racer</h1>
+
+        <div class="tech-tags">
+            <span class="tag tag-highlight">10.015 Physical World &middot; SC02 Team 01</span>
+            <span class="tag">Elastic Potential Energy</span>
+            <span class="tag">3D Printing</span>
+            <span class="tag">Mechanical Design</span>
+        </div>
+
+        <p class="text-grey" style="max-width: 800px; margin-bottom: 1.5rem;">
+            A 3D-printed toy car built to run an obstacle course of ramps, rough surfaces, and vertical steps
+            using nothing but a twisted rubber band for propulsion. After weighing springs, compressed air, and
+            rubber bands on cost, feasibility, and ease of modification, we built around a rubber-band drive
+            shaft &mdash; then iterated the wheels, axle, and chassis until it could actually clear the course.
+        </p>
+
+        <a href="docs/Physics 1D Project poster.pdf" target="_blank" class="btn-outline">
+            View Project Poster
+        </a>
+        <a href="docs/Group1 1D Project.pdf" target="_blank" class="btn-outline" style="margin-left: 0.75rem;">
+            View Full Worksheet
+        </a>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 0;">
+        <div class="hero-image-large">
+            <img src="photos/wheels.jpg" alt="Final car chassis with detached front and rear wheels">
+        </div>
+
+        <div class="specs-container">
+            <div class="specs-title">Specifications</div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Propulsion</h4>
+                    <p>Rubber band twisted around the rear drive shaft, k &asymp; 35.5 N/m</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Wheels</h4>
+                    <p>40mm total radius, 20mm width, square axle hole for a slip-free grip</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Chassis</h4>
+                    <p>70mm x 175mm, 3D-printed PLA, open-wheel layout</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Material</h4>
+                    <p>3D-printed PLA throughout, except ball bearings and rubber bands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="flex-split">
+            <div class="flex-content">
+                <h2>Why a Rubber Band?</h2>
+                <p class="text-grey" style="text-align: justify;">
+                    Three propulsion methods were on the table: springs, compressed air, and rubber bands.
+                    Springs were durable but hard to modify and had limited speed control. Compressed air gave
+                    high speed potential but was expensive to remodel, prone to leaks, and hogged space needed
+                    for ballast. Rubber bands won on accessibility, cost, and how easily the setup could be
+                    tuned &mdash; add, remove, or swap bands for more or less power &mdash; even though they demanded
+                    more careful control of direction and speed.
+                </p>
+            </div>
+            <div class="flex-image">
+                <img src="photos/design-sketches.png" alt="Hand sketch of the rubber band propulsion system and drive shaft">
+                <div class="image-caption">Rubber band placement: twisted around the rear axle, released to propel the car forward.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div style="margin-bottom: 3rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Engineering the Chassis</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="step-number">01</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Bigger Wheels</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    Larger wheels generate more torque (&tau; = F &times; D) to clear bumps and gaps, while also
+                    raising ground clearance and the car's approach angle onto ramps and steps.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="step-number">02</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Low Friction, High Traction</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    Ball bearings at the front axle cut friction for smoother, faster spin, while slick, wide
+                    tires increase grip against the ground to keep the car tracking straight.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="step-number">03</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Washers &amp; Low Center of Gravity</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    Washers between axle and wheel stop sideways slip and keep the wheels spinning true, while a
+                    low center of gravity keeps the car from toppling over on bouncy surfaces.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+            <h2 style="text-align: center; margin-bottom: 1rem; font-size: 2.5rem;">Three Iterations to the Finish Line</h2>
+            <p class="text-grey" style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+                The full build &mdash; mechanism, iterations, and final design &mdash; as it appeared on our project poster.
+            </p>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100%; max-width: 800px; border-radius: 8px;">
+                    <img src="photos/poster.jpg" alt="Full project poster: mechanism, initial CAD, initial prototype, final design, and learning points" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <ul style="list-style-position: outside; margin-left: 1.5rem;">
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Initial Prototype Problems:</strong> Small wheels gave too little torque, the axle hole was oversized so the axle spun without turning the wheels, there was no ground clearance for the rubber band, and the body was too thick and heavy.
+                    </li>
+                    <li class="text-grey" style="text-align: justify;">
+                        <strong style="color: #ffffff;">Final Fixes:</strong> Bigger wheels with a square axle hole for grip, C-clips to stop the wheels sliding off, a taller triangular axle for clearance, and a lighter, redesigned chassis &mdash; rebalanced with a small white load once the lighter frame shifted the center of mass rearward.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>The Physics of the Launch</h2>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto 2rem;">
+            <p class="text-grey" style="text-align: justify;">
+                Elastic potential energy stored in the twisted rubber band converts to kinetic and gravitational
+                potential energy as the car climbs the ramp and pushes through friction on rough and bouncy
+                surfaces:
+            </p>
+            <p style="text-align: center; font-size: 1.1rem; margin: 1.5rem 0; color: #ffffff;">
+                &frac12;kx&sup2; = &frac12;mv&sup2; + mgh + W<sub>friction</sub>
+            </p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto 3rem; overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #333333;">
+                        <th style="text-align: left; padding: 0.75rem; color: #ffffff;">Quantity</th>
+                        <th style="text-align: left; padding: 0.75rem; color: #ffffff;">Value</th>
+                        <th style="text-align: left; padding: 0.75rem; color: #ffffff;">Quantity</th>
+                        <th style="text-align: left; padding: 0.75rem; color: #ffffff;">Value</th>
+                    </tr>
+                </thead>
+                <tbody class="text-grey">
+                    <tr style="border-bottom: 1px solid #222222;"><td style="padding: 0.6rem 0.75rem;">Spring constant, k</td><td style="padding: 0.6rem 0.75rem;">35.5 N/m</td><td style="padding: 0.6rem 0.75rem;">Car mass, m</td><td style="padding: 0.6rem 0.75rem;">1 kg</td></tr>
+                    <tr style="border-bottom: 1px solid #222222;"><td style="padding: 0.6rem 0.75rem;">Kinetic friction, &mu;k</td><td style="padding: 0.6rem 0.75rem;">0.9</td><td style="padding: 0.6rem 0.75rem;">Static friction, &mu;s</td><td style="padding: 0.6rem 0.75rem;">0.6</td></tr>
+                    <tr style="border-bottom: 1px solid #222222;"><td style="padding: 0.6rem 0.75rem;">GPE up the 15&deg; slope</td><td style="padding: 0.6rem 0.75rem;">1.290 J</td><td style="padding: 0.6rem 0.75rem;">Friction work done</td><td style="padding: 0.6rem 0.75rem;">7.358 J</td></tr>
+                    <tr><td style="padding: 0.6rem 0.75rem;">Total energy required</td><td style="padding: 0.6rem 0.75rem;">8.753 J</td><td style="padding: 0.6rem 0.75rem;"><strong style="color: #ffffff;">Extension needed</strong></td><td style="padding: 0.6rem 0.75rem;"><strong style="color: #ffffff;">0.7 m</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="challenge-grid">
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Main Obstacles</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    Three challenges drove every design decision: getting up the ramp, overcoming rough surfaces,
+                    and simply staying on track &mdash; each pointed straight at maximizing spring constant and
+                    extension while keeping the car planted.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Torque vs. Wheel Size</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    Torque &tau; = F &times; D means a larger wheel diameter directly buys more force to climb the
+                    1&ndash;4cm vertical steps on the course &mdash; the single biggest lever available for clearing
+                    obstacles.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Open-Wheel Layout</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    Mounting the wheels outside the main body, rather than enclosing them, let the car accelerate
+                    faster since the wheels aren't constrained by the chassis shape.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">What We'd Try Next</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    Comparing notes with other teams, a mousetrap mechanism releases energy proportional to
+                    spring extension throughout the run, giving steadier, more controllable output than the
+                    rubber band's single initial burst.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

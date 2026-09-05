@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar-Charged Desk Cleaner | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=5">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>PORTFOLIO</strong></div>
+            <div class="nav-links">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container pt-nav project-header">
+        <a href="../index.html#projects" class="back-link">
+            <span>&larr;</span> Back to Projects
+        </a>
+
+        <h1>Solar-Charged Desk Cleaner</h1>
+
+        <div class="tech-tags">
+            <span class="tag tag-highlight">10.023 DES &middot; Group 3.8</span>
+            <span class="tag">Solar Energy</span>
+            <span class="tag">Charge Controller</span>
+            <span class="tag">3D Printing</span>
+            <span class="tag">Sustainability</span>
+        </div>
+
+        <p class="text-grey" style="max-width: 800px; margin-bottom: 1.5rem;">
+            Desk cleaners are usually charged by USB &mdash; unsustainable, since most of Singapore's electricity
+            comes from burning natural gas, and inconvenient, since the cable is easy to forget or lose. This
+            project retrofits a handheld desk cleaner with a solar panel and charge controller so it can run on
+            sunlight without giving up its usability.
+        </p>
+
+        <a href="docs/DES 2025 1D Final Report.pdf" target="_blank" class="btn-outline">
+            View Full Report
+        </a>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 0;">
+        <div class="hero-image-large">
+            <img src="photos/hero.jpg" alt="Solar-charged desk cleaner final prototype">
+        </div>
+
+        <div class="specs-container">
+            <div class="specs-title">Specifications</div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Solar Panel</h4>
+                    <p>6V, 1W, 110mm x 60mm (100mm x 60mm exposed in the holder)</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Battery</h4>
+                    <p>3.7V pouch cell &mdash; only 0.1Ah is actually needed for the load</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Body Modification</h4>
+                    <p>+1.2cm vertical extension, 3D-printed spacer to house the electronics</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Panel Holder</h4>
+                    <p>Custom adjustable, hinged mount &mdash; folds away during use, angles toward the sun to charge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="flex-split">
+            <div class="flex-content">
+                <h2>Sun In, Dust Out</h2>
+                <p class="text-grey" style="text-align: justify;">
+                    The solution integrates a solar panel with the desk cleaner's existing charge controller,
+                    so it can be used without ever being plugged in. The battery was swapped from the original
+                    cylindrical cell to a slimmer pouch cell &mdash; using the original is possible too, but needs
+                    a JST PH2.0 connector and a crimp. The panel folds flat against the body during use and
+                    flips up on its hinge to catch the sun while charging.
+                </p>
+            </div>
+            <div class="flex-image">
+                <img src="photos/panel-unfolded.jpg" alt="Solar panel unfolded on its hinge from the desk cleaner body">
+                <div class="image-caption">The panel holder unfolded &mdash; vertical during use, angled toward the sun when charging.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div style="margin-bottom: 3rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Four Modifications</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="step-number">01</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Battery Swap</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    A pouch battery matching the charge controller's connector replaces the bulkier original
+                    cylindrical cell, sized down to the 3.7V, 0.1Ah the desk cleaner actually needs.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="step-number">02</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Solar Panel</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    A 6V, 1W panel wires directly into the charge controller, sized so the holder's exposed
+                    surface still fits neatly against the body.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="step-number">03</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Extended Body</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    A 3D-printed spacer extends the housing by 1.2cm vertically, just enough to fit the new
+                    electronics between the two halves without changing the grip.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="step-number">04</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Adjustable Holder</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    A custom 3D-printed, hinged holder lets the panel swing out of the way during cleaning and
+                    angle toward the sun when it's time to charge.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">From Bulky Case to Integrated Design</h2>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem; gap: 2rem; flex-wrap: wrap;">
+                <div style="width: 100%; max-width: 900px; border-radius: 8px;">
+                    <img src="photos/iterations.png" alt="First iteration boxed case versus final integrated iteration" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                    <div class="image-caption">First iteration: solar panel and circuitry boxed around the vacuum &mdash; too bulky to hold. Final: the vacuum itself is modified, panel and circuitry built in.</div>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <ul style="list-style-position: outside; margin-left: 1.5rem;">
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">First Iteration:</strong> Housing the solar panel, circuitry, and vacuum inside a printed box preserved the electronics but wrecked the ergonomics &mdash; too bulky to hold comfortably.
+                    </li>
+                    <li class="text-grey" style="text-align: justify;">
+                        <strong style="color: #ffffff;">Final Iteration:</strong> Instead of a case, the vacuum body itself is modified &mdash; the solar panel becomes an added component and the circuitry fits inside a 3D-printed height extension, keeping the original handheld form factor.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>Schematic</h2>
+        </div>
+        <div style="max-width: 1000px; margin: 0 auto 3rem;">
+            <img src="photos/schematic.png" alt="Electrical schematic: solar panel, charge controller, battery, motor, and the real internals labeled" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #333333;">
+            <div class="image-caption">Electrical schematic (left) and the labeled real internals (right): solar charger, battery, PCB, and motor.</div>
+        </div>
+        <div style="max-width: 600px; margin: 0 auto;">
+            <img src="photos/mechanical.png" alt="Mechanical CAD render of the clip-and-hinge solar panel mount" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #333333;">
+            <div class="image-caption">Mechanical CAD: a clip onto the vacuum body, with the panel holder attached by a hinge.</div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>Results</h2>
+        </div>
+
+        <div style="max-width: 1000px; margin: 0 auto 3rem;">
+            <img src="photos/efficiency.png" alt="Table and graph of solar panel efficiency across irradiance levels" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #333333;">
+            <div class="image-caption">Power and efficiency measured across 9 irradiance levels from a halogen lamp, at varying lamp-to-panel distance.</div>
+        </div>
+
+        <div style="max-width: 1000px; margin: 0 auto 3rem;">
+            <img src="photos/power_compare.png" alt="Table and graph comparing power output of the modified vs original desk cleaner over 10 minutes" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #333333;">
+            <div class="image-caption">Power output over 10 minutes, modified vs. original &mdash; a 0.403% difference, well within noise.</div>
+        </div>
+
+        <div class="challenge-grid">
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Efficiency Holds Steady</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    Panel efficiency stayed roughly constant (~0.5&ndash;0.7%) across irradiance from 61 to 408 W/m&sup2;, so a conservative 0.5% was used for sizing &mdash; an underestimate that keeps the energy budget honest.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">3.5 Minutes a Day</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    With Singapore's ~3.94 peak sun hours (NASA POWER, Dec 2022), the panel charges roughly 425 J per day &mdash; enough for about 3.5 minutes of use, just over the target 3-minute daily need.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">No Performance Trade-off</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    Average power was 1.995 W modified vs. 1.987 W original &mdash; a 0.403% difference. The solar retrofit doesn't compromise the desk cleaner's actual cleaning power.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Not Too Bulky</h3>
+                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
+                    The final attachments and panel add height but stay lightweight, so the desk cleaner is still usable one-handed &mdash; the goal of maintaining functionality while going solar was met.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">See It Charge</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <video controls playsinline style="width: 100%; border-radius: 8px; border: 1px solid #333333;">
+                    <source src="photos/demo.mp4" type="video/mp4">
+                    Your browser can't play this video inline &mdash;
+                    <a href="photos/demo.mp4" style="color: #ffffff;">open it directly</a> instead.
+                </video>
+                <div class="image-caption">The finished solar-charged desk cleaner in action.</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
