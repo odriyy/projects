@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond Sight, I Understand | Engineering Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,600&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -20,214 +20,304 @@
         </nav>
     </header>
 
-    <section class="container pt-nav project-header">
-        <a href="../index.html#projects" class="back-link">
-            <span>&larr;</span> Back to Projects
-        </a>
-
-        <h1>Beyond Sight, I Understand</h1>
-
-        <div class="tech-tags">
-            <span class="tag tag-highlight">HASS 02.179 &middot; Fashion, Technology &amp; Innovation</span>
-            <span class="tag">Braille Embroidery</span>
-            <span class="tag">Sound Design</span>
-            <span class="tag">ESP32</span>
-            <span class="tag">Tactile Fashion</span>
+    <!-- HERO -->
+    <section class="bs-hero" style="background-image: url('photos/jacket-front.jpg');">
+        <div class="bs-hero-frame"></div>
+        <div class="bs-hero-inner">
+            <a href="../index.html#projects" class="bs-back"><span>&larr;</span> Back to Projects</a>
+            <div class="bs-overline">HASS 02.179TS &middot; Fashion, Technology &amp; Innovation</div>
+            <span class="bs-script">Beyond Sight</span>
+            <span class="bs-title-serif">I Understand</span>
+            <p class="bs-subtitle">A fashion innovation for the blind community</p>
+            <p class="bs-credit">Project by Audrey, Hillary, Davin, Srihari, Jarrod</p>
+            <div class="bs-hero-actions">
+                <a href="docs/Tactile Fashion Final Presentation.pdf" target="_blank" class="bs-btn on-dark">View Full Presentation</a>
+            </div>
         </div>
-
-        <p class="text-grey" style="max-width: 800px; margin-bottom: 1.5rem;">
-            A fashion innovation for the blind community: a varsity jacket that communicates through touch and
-            sound instead of sight alone. Braille embroidery, hand-set gemstones, a geometric elephant emblem,
-            and an ESP32-driven chime system turn the garment into something a blind wearer can read, hear, and
-            be recognised by &mdash; not just be dressed in.
-        </p>
-
-        <a href="docs/Tactile Fashion Final Presentation.pdf" target="_blank" class="btn-outline">
-            View Full Presentation
-        </a>
     </section>
 
-    <section class="container" style="padding-top: 2rem; padding-bottom: 0;">
-        <div class="hero-image-large">
-            <img src="photos/jacket-front.jpg" alt="Front view of the tactile varsity jacket with braille embroidery, gemstones, and the elephant emblem">
-        </div>
+    <!-- FASHION WITHOUT SIGHT -->
+    <section class="bs-section">
+        <div class="container bs-center">
+            <h2 class="bs-h2 bs-reveal">Fashion Without Sight</h2>
+            <hr class="bs-rule bs-reveal">
+            <p class="bs-dek" style="margin: 0 auto;">
+                The fashion industry designs for those who can <strong>see</strong>. Everyone else is
+                <strong>left out</strong>.
+            </p>
 
-        <div class="specs-container">
-            <div class="specs-title">Specifications</div>
-            <div class="specs-grid">
-                <div class="spec-item">
-                    <h4>Braille</h4>
-                    <p>Machine-embroidered on the front right panel &mdash; durable, tactile, and readable</p>
+            <div class="bs-stats">
+                <div class="bs-stat bs-reveal">
+                    <div class="bs-stat-label">The Blind</div>
+                    <div class="bs-stat-number">43M</div>
+                    <div class="bs-stat-caption">people with blindness*</div>
+                    <p class="bs-stat-desc">Can't independently style their own outfits. They're unable to express themselves.</p>
                 </div>
-                <div class="spec-item">
-                    <h4>Sound</h4>
-                    <p>Shoulder chimes plus an ESP32 + ultrasonic sensor driving a tie-mounted speaker</p>
-                </div>
-                <div class="spec-item">
-                    <h4>Identity</h4>
-                    <p>Hand-glued diamond-clear gemstones and a geometric elephant emblem</p>
-                </div>
-                <div class="spec-item">
-                    <h4>Construction</h4>
-                    <p>Machine embroidery for precision, hand-craft for the gemstones and sensor casing</p>
+                <div class="bs-stat outline bs-reveal">
+                    <div class="bs-stat-label">The Gap</div>
+                    <div class="bs-stat-number">0</div>
+                    <div class="bs-stat-caption">major fashion brands design for this</div>
+                    <p class="bs-stat-desc">Adaptive fashion exists only for physical disabilities. No design exists for sensory disabilities.</p>
                 </div>
             </div>
+            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--ink-soft); font-style: italic;">*data from WHO</p>
         </div>
     </section>
 
-    <section class="bg-black">
-        <div class="flex-split">
-            <div class="flex-content">
-                <h2>Six Blind Men and an Elephant</h2>
-                <p class="text-grey" style="text-align: justify;">
-                    Six blind men encounter an elephant. Each touches a different part and describes it from
-                    that single point of contact &mdash; the side feels like a wall, the trunk like a snake, the
-                    ear like a fan. Limited perspective, disagreement, and a relative truth that only comes
-                    together through collaboration. That story sits behind the whole project: the fashion
-                    industry designs almost entirely for sight, leaving an estimated 43 million blind people
-                    unable to independently style or express themselves through clothing, with zero major
-                    brands designing for sensory disability. Our question: how does a blind person piece an
-                    outfit together when fashion is designed entirely around sight?
-                </p>
-            </div>
-            <div class="flex-image">
-                <img src="photos/team.jpg" alt="Project team with the finished jacket and braille sample">
-                <div class="image-caption">Audrey, Hillary, Davin, Srihari, and Jarrod with the finished piece.</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
-        <div style="margin-bottom: 3rem;">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">The Full Look</h2>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
-                <div class="step-number">01</div>
-                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Varsity Jacket &mdash; Main Product</h3>
-                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
-                    Braille embroidery, hand-set gemstones, a geometric elephant emblem, and metal chimes at the
-                    shoulder. Chosen for its versatility as a wearable canvas.
-                </p>
-            </div>
-
-            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
-                <div class="step-number">02</div>
-                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Tie-as-Belt-Speaker</h3>
-                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
-                    A tie worn as a belt, wrapped around the waist, with an elephant-shaped speaker attached and
-                    customisable sound and volume &mdash; the second sound element.
-                </p>
-            </div>
-
-            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
-                <div class="step-number">03</div>
-                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Collar Button-Up &mdash; Base Layer</h3>
-                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
-                    A clean white foundation with a structured collar that frames the full look. Each piece is
-                    intentional; together they form a complete identity statement.
-                </p>
+    <!-- THE STORY -->
+    <section class="bs-section alt">
+        <div class="container">
+            <div class="bs-split">
+                <div class="bs-split-text bs-reveal">
+                    <div class="bs-eyebrow">Behind the Innovation</div>
+                    <h2 class="bs-h2">The Story</h2>
+                    <hr class="bs-rule left">
+                    <p class="bs-dek">
+                        Six blind men are curious about an elephant. Each touches a different part and describes
+                        it based on their own touch &mdash; the side feels like a wall, the trunk like a snake,
+                        the tusk like a spear, a leg like a tree, an ear like a fan, the tail like a rope. The
+                        men argue, and slowly convince each other.
+                    </p>
+                    <div class="bs-terms">
+                        <span class="bs-term">Limited Perspective</span>
+                        <span class="bs-term">Collaboration</span>
+                        <span class="bs-term">Relative Truth</span>
+                    </div>
+                </div>
+                <div class="bs-split-media bs-reveal">
+                    <img src="photos/team.jpg" alt="Project team with the finished jacket and braille sample">
+                    <div class="bs-caption">Audrey, Hillary, Davin, Srihari, and Jarrod with the finished piece.</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-black">
-        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+    <!-- OUR THOUGHT PROCESS -->
+    <section class="bs-section">
+        <div class="container">
+            <div class="bs-split reverse">
+                <div class="bs-split-text bs-reveal">
+                    <div class="bs-eyebrow">Our Thought Process</div>
+                    <h2 class="bs-h2">How does a blind person piece an outfit together?</h2>
+                    <hr class="bs-rule left">
+                    <p class="bs-dek">When fashion is designed entirely around sight, we set out to answer this with a garment built on four ideas:</p>
+                    <ul style="margin-top: 1.25rem; color: var(--ink-soft); padding-left: 1.1rem;">
+                        <li style="margin-bottom: 0.6rem;">Opens opportunity for the blind to express themselves through fashion</li>
+                        <li style="margin-bottom: 0.6rem;">To express identity &amp; celebrate differences</li>
+                        <li style="margin-bottom: 0.6rem;">Equipped with sensory design (texture &amp; sound)</li>
+                        <li>A varsity jacket, chosen for its versatility</li>
+                    </ul>
+                    <div class="bs-pills">
+                        <span class="bs-pill">Braille Embroidery</span>
+                        <span class="bs-pill">Speaker &amp; Chimes</span>
+                        <span class="bs-pill">Gemstones</span>
+                        <span class="bs-pill">Geometric Elephant Emblem</span>
+                    </div>
+                </div>
+                <div class="bs-split-media bs-reveal">
+                    <img src="photos/jacket-front.jpg" alt="Front view of the tactile varsity jacket">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Four Features, One Language</h2>
+    <!-- THE FULL LOOK -->
+    <section class="bs-section alt">
+        <div class="container bs-center">
+            <h2 class="bs-h2 bs-reveal">The Full Look</h2>
+            <hr class="bs-rule bs-reveal">
 
-            <div style="display: flex; justify-content: center; margin-bottom: 3rem; gap: 2rem; flex-wrap: wrap;">
-                <div style="width: 100%; max-width: 500px; border-radius: 8px;">
-                    <img src="photos/embroidery-detail.jpg" alt="Embroidery machine stitching the geometric elephant emblem onto the jacket" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
-                    <div class="image-caption">The elephant emblem being machine-embroidered &mdash; digital design brought to life.</div>
+            <div class="bs-grid" style="text-align: left;">
+                <div class="bs-card bs-reveal">
+                    <h3>Varsity Jacket</h3>
+                    <div class="bs-card-sub">main product</div>
+                    <ul>
+                        <li>Braille embroidery</li>
+                        <li>Gemstones</li>
+                        <li>Geometric elephant emblem</li>
+                        <li>Chimes in the shoulder</li>
+                    </ul>
+                </div>
+                <div class="bs-card bs-reveal">
+                    <h3>Tie-as-Belt-Speaker</h3>
+                    <div class="bs-card-sub">2nd sound element</div>
+                    <ul>
+                        <li>A tie worn as a belt, wrapped around the waist</li>
+                        <li>Elephant-shaped speaker attached</li>
+                        <li>Customisable sound &amp; volume</li>
+                    </ul>
+                </div>
+                <div class="bs-card bs-reveal">
+                    <h3>Collar Button-Up</h3>
+                    <div class="bs-card-sub">base layer</div>
+                    <ul>
+                        <li>White colour</li>
+                        <li>Clean foundation</li>
+                        <li>Structured collar</li>
+                        <li>Frames the full look</li>
+                    </ul>
                 </div>
             </div>
 
-            <div style="max-width: 900px; margin: 0 auto;">
-                <ul style="list-style-position: outside; margin-left: 1.5rem;">
-                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
-                        <strong style="color: #ffffff;">The Braille &mdash; the voice:</strong> "Beyond sight, I understand," embroidered on the front right panel. Sighted people see patterned dots; blind people read it by feel &mdash; durable, tactile, and searchable.
-                    </li>
-                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
-                        <strong style="color: #ffffff;">The Gemstones &mdash; the presence:</strong> Diamond-clear stones hand-glued in a scattered, random pattern with textile glue. Light shifts and shines with movement &mdash; identity markers that stay visible regardless of disability.
-                    </li>
-                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
-                        <strong style="color: #ffffff;">The Emblem &mdash; the soul:</strong> A machine-embroidered geometric elephant, linking back to the story of the six blind men &mdash; a reminder that perspective matters, but truth is relative.
-                    </li>
-                    <li class="text-grey" style="text-align: justify;">
-                        <strong style="color: #ffffff;">The Sound &mdash; the accessories:</strong> Metal chimes at the shoulder ring with movement, while an ESP32, ultrasonic sensor, and 0.96" display drive a tie-mounted speaker that plays a song when someone is detected nearby &mdash; letting a blind wearer be "heard" as well as seen.
-                    </li>
-                </ul>
+            <p class="bs-closing-line">Each piece is <strong>intentional</strong>. Together, they form a <strong>complete identity statement</strong>.</p>
+        </div>
+    </section>
+
+    <!-- FOUR FEATURES -->
+    <section class="bs-section">
+        <div class="container">
+            <div class="bs-split">
+                <div class="bs-split-media bs-reveal">
+                    <img src="photos/embroidery-detail.jpg" alt="Embroidery machine stitching the geometric elephant emblem onto the jacket">
+                    <div class="bs-caption">The elephant emblem being machine-embroidered &mdash; digital design brought to life.</div>
+                </div>
+                <div class="bs-split-text bs-reveal">
+                    <div class="bs-eyebrow">Four Features, One Language</div>
+                    <h2 class="bs-h2">Braille, Gemstones, Emblem &amp; Sound</h2>
+                    <hr class="bs-rule left">
+
+                    <div class="bs-feature-list" style="margin: 1.5rem 0 0;">
+                        <div class="bs-feature">
+                            <div class="bs-feature-num">01</div>
+                            <div>
+                                <h3>The Braille &mdash; the voice</h3>
+                                <p>"Beyond sight, I understand," embroidered on the front right panel. Sighted people see patterned dots; blind people read it by feel &mdash; durable, tactile, and searchable.</p>
+                            </div>
+                        </div>
+                        <div class="bs-feature">
+                            <div class="bs-feature-num">02</div>
+                            <div>
+                                <h3>The Gemstones &mdash; the presence</h3>
+                                <p>Diamond-clear stones hand-glued in a scattered, random pattern with textile glue. Light shifts and shines with movement &mdash; identity markers that stay visible regardless of disability.</p>
+                            </div>
+                        </div>
+                        <div class="bs-feature">
+                            <div class="bs-feature-num">03</div>
+                            <div>
+                                <h3>The Emblem &mdash; the soul</h3>
+                                <p>A machine-embroidered geometric elephant, linking back to the story of the six blind men &mdash; a reminder that perspective matters, but truth is relative.</p>
+                            </div>
+                        </div>
+                        <div class="bs-feature">
+                            <div class="bs-feature-num">04</div>
+                            <div>
+                                <h3>The Sound &mdash; the accessories</h3>
+                                <p>Metal chimes at the shoulder ring with movement, while an ESP32, ultrasonic sensor, and 0.96" display drive a tie-mounted speaker that plays a song when someone is detected nearby.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <div class="section-header" style="margin-bottom: 2rem;">
-            <h2>Fashion Theory</h2>
-        </div>
+    <!-- FASHION THEORY -->
+    <section class="bs-section alt">
+        <div class="container bs-center">
+            <div class="bs-eyebrow">Fashion Theory</div>
+            <h2 class="bs-h2 bs-reveal">Not Wearable Tech &mdash; Fashion as Communication</h2>
+            <hr class="bs-rule bs-reveal">
 
-        <div class="challenge-grid">
-            <div class="challenge-box">
-                <h3 style="margin-bottom: 0;">Fashion as Communication</h3>
-                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
-                    Not wearable technology, not smart clothing &mdash; technology here enhances aesthetics and
-                    communicative power. The braille dots become a tactile message and surface design; the
-                    chimes become a sound and visual statement.
-                </p>
-            </div>
-
-            <div class="challenge-box">
-                <h3 style="margin-bottom: 0;">Techno Fashion</h3>
-                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
-                    Fashion carries cultural, social, and expressive meaning. The jacket communicates identity
-                    visually for sighted people, and tactilely and sonically for blind and deaf wearers &mdash;
-                    the same garment, read two ways.
-                </p>
-            </div>
-
-            <div class="challenge-box">
-                <h3 style="margin-bottom: 0;">The Hand vs. The Machine</h3>
-                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
-                    Karl Lagerfeld: "What joins the hand and the machine is the heart." The emblem and braille
-                    dots are machine-embroidered for precision; the gemstones and sensor casing are hand-crafted
-                    &mdash; a deliberate collaboration between human craft and digital precision.
-                </p>
-            </div>
-
-            <div class="challenge-box">
-                <h3 style="margin-bottom: 0;">Beyond the Jacket</h3>
-                <p class="text-grey" style="text-align: justify; margin-top: 1rem;">
-                    None of the three languages &mdash; gemstone identity, braille system, sound elements &mdash;
-                    are jacket-exclusive. Each is designed to live on anything: a dress, a wristband, footwear,
-                    a bag, a scarf, or headwear.
-                </p>
+            <div class="bs-grid" style="text-align: left;">
+                <div class="bs-card bs-reveal">
+                    <h3>Fashion as Communication</h3>
+                    <p style="color: var(--ink-soft); font-size: 0.95rem;">Not wearable technology, not smart clothing &mdash; technology here enhances aesthetics and communicative power. The braille dots become a tactile message and surface design; the chimes become a sound and visual statement.</p>
+                </div>
+                <div class="bs-card bs-reveal">
+                    <h3>Techno Fashion</h3>
+                    <p style="color: var(--ink-soft); font-size: 0.95rem;">Fashion carries cultural, social, and expressive meaning. The jacket communicates identity visually for sighted people, and tactilely and sonically for blind and deaf wearers &mdash; the same garment, read two ways.</p>
+                </div>
+                <div class="bs-card bs-reveal">
+                    <h3>The Hand vs. The Machine</h3>
+                    <p style="color: var(--ink-soft); font-size: 0.95rem; font-style: italic;">"What joins the hand and the machine is the heart." &mdash; Karl Lagerfeld. The emblem and braille dots are machine-embroidered for precision; the gemstones and sensor casing are hand-crafted.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-black">
-        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Hear It in Action</h2>
-            <div style="max-width: 700px; margin: 0 auto;">
-                <video controls playsinline style="width: 100%; border-radius: 8px; border: 1px solid #333333;">
+    <!-- BEYOND THE JACKET -->
+    <section class="bs-section">
+        <div class="container bs-center">
+            <h2 class="bs-h2 bs-reveal">Beyond the Jacket</h2>
+            <hr class="bs-rule bs-reveal">
+            <p class="bs-dek" style="margin: 0 auto;">These features aren't only for the jacket. Each is designed to live on anything.</p>
+
+            <div class="bs-grid">
+                <div class="bs-card bs-reveal bs-center">
+                    <span class="bs-card-icon">&#10047;</span>
+                    <h3>Braille System</h3>
+                    <p style="color: var(--ink-soft); font-size: 0.9rem;">Embroidered on garments, accessories, straps &amp; bands &mdash; flat or curved surfaces.</p>
+                </div>
+                <div class="bs-card bs-reveal bs-center">
+                    <span class="bs-card-icon">&#128142;</span>
+                    <h3>Gemstone Identity</h3>
+                    <p style="color: var(--ink-soft); font-size: 0.9rem;">Rhinestones &amp; crystals applied to textile or hard surfaces for a personalised visual presence.</p>
+                </div>
+                <div class="bs-card bs-reveal bs-center">
+                    <span class="bs-card-icon">&#128276;</span>
+                    <h3>Sound Elements</h3>
+                    <p style="color: var(--ink-soft); font-size: 0.9rem;">Chimes, speakers &amp; vibration components integrated into buckles, cuffs, hems, or strap hardware.</p>
+                </div>
+            </div>
+
+            <div class="bs-pills bs-reveal" style="justify-content: center; margin-top: 3rem;">
+                <span class="bs-pill">Dress &#128100;</span>
+                <span class="bs-pill">Wristband / Cuff &#8986;</span>
+                <span class="bs-pill">Footwear &#128095;</span>
+                <span class="bs-pill">Bag &#128092;</span>
+                <span class="bs-pill">Scarf &#129521;</span>
+                <span class="bs-pill">Headwear &#128082;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="bs-section alt">
+        <div class="container bs-center">
+            <h2 class="bs-h2 bs-reveal">Hear It in Action</h2>
+            <hr class="bs-rule bs-reveal">
+            <div class="bs-video-wrap bs-reveal">
+                <video controls playsinline>
                     <source src="photos/chimes-demo.mov" type="video/quicktime">
                     <source src="photos/chimes-demo.mov" type="video/mp4">
                     Your browser can't play this video inline &mdash;
-                    <a href="photos/chimes-demo.mov" style="color: #ffffff;">open it directly</a> instead.
+                    <a href="photos/chimes-demo.mov" style="color: var(--gold-deep);">open it directly</a> instead.
                 </video>
-                <div class="image-caption">The shoulder chimes and tie-mounted speaker responding as the sensor detects motion.</div>
+                <div class="bs-caption">The shoulder chimes and tie-mounted speaker responding as the sensor detects motion.</div>
             </div>
         </div>
     </section>
 
-    <section class="container" style="padding-top: 3rem; padding-bottom: 5rem; text-align: center;">
-        <h2 style="font-size: 1.75rem; max-width: 700px; margin: 0 auto 1rem;">
-            Fashion has always been about being seen. But how about with them who are unable to see?
-        </h2>
-        <p class="text-grey" style="max-width: 600px; margin: 0 auto;">Beyond Sight, I Understand.</p>
+    <!-- CLOSING QUOTE -->
+    <section class="bs-quote-section" style="background-image: url('photos/team.jpg');">
+        <div class="bs-quote-inner">
+            <div class="bs-quote-script">Beyond Sight, I Understand</div>
+            <p class="bs-quote-text">
+                Fashion has always been about <span class="hl">being seen</span>.<br>
+                But how about with them who are <span class="hl">unable to see</span>?
+            </p>
+        </div>
     </section>
+
+    <script>
+        (function () {
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var items = document.querySelectorAll('.bs-reveal');
+            if (reduceMotion || !('IntersectionObserver' in window)) {
+                items.forEach(function (el) { el.classList.add('is-visible'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            items.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
 
 </body>
 </html>

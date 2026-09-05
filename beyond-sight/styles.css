@@ -1,0 +1,281 @@
+/* =========================================
+   BEYOND SIGHT — warm editorial theme
+   (bespoke look, distinct from the dark
+   engineering-portfolio template)
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+    --cream: #f7f1e6;
+    --cream-alt: #f1e9d8;
+    --paper-line: #e2d3ac;
+    --ink: #2b2a26;
+    --ink-soft: #55524a;
+    --gold: #b4802e;
+    --gold-deep: #8f6423;
+    --gold-pill: #c08a34;
+    --card-bg: #fffdf8;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: 1150px; margin: 0 auto; padding: 5rem 2rem; }
+
+/* leaf-texture wash on cream sections */
+.bs-section {
+    position: relative;
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(180,128,46,0.05), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(180,128,46,0.05), transparent 40%);
+    border-top: 1px solid var(--paper-line);
+}
+.bs-section.alt { background-color: var(--cream-alt); }
+
+/* =========================================
+   NAV
+   ========================================= */
+header {
+    position: fixed;
+    top: 0; width: 100%;
+    background-color: rgba(247, 241, 230, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--paper-line);
+    z-index: 1000;
+}
+nav {
+    max-width: 1150px; margin: 0 auto; padding: 1.4rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 0.75rem;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 0.95rem; letter-spacing: 2px; color: var(--ink); }
+.nav-links { display: flex; gap: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink-soft); }
+.nav-links a { transition: color 0.25s ease; }
+.nav-links a:hover { color: var(--gold-deep); }
+
+/* =========================================
+   HERO — dimmed photo, script + serif title
+   ========================================= */
+.bs-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    background-size: cover;
+    background-position: center 30%;
+    color: #fdf8ee;
+    overflow: hidden;
+}
+.bs-hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(20,16,10,0.55) 0%, rgba(20,16,10,0.72) 55%, rgba(20,16,10,0.85) 100%);
+}
+.bs-hero-frame {
+    position: absolute;
+    top: 1.5rem; left: 1.5rem; right: 1.5rem; bottom: 1.5rem;
+    border: 1px solid rgba(212, 175, 112, 0.55);
+    pointer-events: none;
+}
+.bs-hero-inner { position: relative; max-width: 900px; margin: 0 auto; text-align: center; }
+.bs-back {
+    position: relative;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    color: #e9dfc8; font-size: 0.85rem; margin-bottom: 2.5rem;
+    opacity: 0.85; transition: opacity 0.25s ease;
+}
+.bs-back:hover { opacity: 1; }
+.bs-overline {
+    font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+    color: #e3d3ac; margin-bottom: 1.5rem;
+}
+.bs-script {
+    font-family: 'Sacramento', cursive;
+    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    color: #f1e2bd;
+    line-height: 1;
+    display: block;
+}
+.bs-title-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    color: #fdf8ee;
+    display: block;
+    margin-top: 0.25rem;
+}
+.bs-subtitle {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #e9dfc8;
+    margin-top: 1.75rem;
+}
+.bs-credit {
+    font-size: 0.85rem;
+    color: #cfc0a0;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+.bs-hero-actions { margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.bs-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold-deep);
+    background: transparent;
+    padding: 0.7rem 1.6rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+.bs-btn:hover { background-color: var(--gold); color: #fffdf8; transform: translateY(-2px); }
+.bs-btn.on-dark { border-color: rgba(241, 226, 189, 0.7); color: #f1e2bd; }
+.bs-btn.on-dark:hover { background-color: #f1e2bd; color: #3a2c12; }
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+.bs-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--gold-deep); font-style: italic; margin-bottom: 0.75rem;
+}
+.bs-h2 { font-size: clamp(1.9rem, 4vw, 2.75rem); margin-bottom: 1rem; }
+.bs-rule { width: 64px; height: 2px; background: var(--gold); margin: 0 auto 2rem; border: none; }
+.bs-rule.left { margin: 0 0 2rem; }
+.bs-dek { font-size: 1.05rem; color: var(--ink-soft); max-width: 720px; }
+.bs-dek strong { color: var(--gold-deep); }
+.bs-center { text-align: center; }
+
+/* =========================================
+   STAT CARDS
+   ========================================= */
+.bs-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.bs-stat { padding: 2rem; text-align: center; }
+.bs-stat.outline { border: 1px solid var(--gold); border-radius: 10px; background: var(--card-bg); }
+.bs-stat-label { color: var(--gold-deep); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; font-family: 'Playfair Display', serif; }
+.bs-stat-number { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: var(--ink); }
+.bs-stat-caption { font-style: italic; color: var(--gold); font-size: 0.9rem; margin: 0.5rem 0 1rem; }
+.bs-stat-desc { color: var(--ink-soft); font-size: 0.95rem; }
+
+/* =========================================
+   FLEX SPLIT (story / thought process)
+   ========================================= */
+.bs-split { display: flex; align-items: center; gap: 3.5rem; flex-wrap: wrap; }
+.bs-split-text { flex: 1.1; min-width: 280px; }
+.bs-split-media { flex: 1; min-width: 280px; }
+.bs-split.reverse { flex-direction: row-reverse; }
+.bs-split img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--paper-line); box-shadow: 0 12px 30px rgba(90, 70, 30, 0.12); }
+.bs-caption { text-align: center; font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.75rem; font-style: italic; }
+
+.bs-terms { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.bs-term { font-weight: 600; color: var(--gold-deep); border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+
+.bs-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+.bs-pill { background: var(--gold-pill); color: #fffdf8; padding: 0.5rem 1.1rem; border-radius: 999px; font-size: 0.82rem; letter-spacing: 0.3px; }
+
+/* =========================================
+   CARD GRID (full look / fashion theory / beyond the jacket)
+   ========================================= */
+.bs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem; margin-top: 3rem; }
+.bs-card {
+    background: var(--card-bg);
+    border: 1px solid var(--paper-line);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.bs-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 14px 28px rgba(120, 90, 30, 0.12); }
+.bs-card-icon { font-size: 1.8rem; margin-bottom: 0.75rem; display: inline-block; }
+.bs-card h3 { color: var(--gold-deep); font-size: 1.25rem; margin-bottom: 0.25rem; }
+.bs-card .bs-card-sub { font-style: italic; color: var(--ink-soft); font-size: 0.85rem; margin-bottom: 1rem; }
+.bs-card ul { list-style: none; }
+.bs-card li { position: relative; padding-left: 1.1rem; margin-bottom: 0.5rem; color: var(--ink-soft); font-size: 0.95rem; }
+.bs-card li::before { content: "\2022"; color: var(--gold); position: absolute; left: 0; }
+
+.bs-closing-line { text-align: center; margin-top: 2.5rem; font-style: italic; font-size: 1.05rem; color: var(--ink-soft); }
+.bs-closing-line strong { color: var(--gold-deep); }
+
+/* =========================================
+   FEATURE ROWS (four features, one language)
+   ========================================= */
+.bs-feature-list { max-width: 850px; margin: 3rem auto 0; }
+.bs-feature { display: flex; gap: 1.25rem; padding: 1.5rem 0; border-bottom: 1px solid var(--paper-line); }
+.bs-feature:last-child { border-bottom: none; }
+.bs-feature-num { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.5rem; font-weight: 700; flex-shrink: 0; width: 2.5rem; }
+.bs-feature h3 { font-size: 1.2rem; color: var(--ink); margin-bottom: 0.35rem; }
+.bs-feature p { color: var(--ink-soft); font-size: 0.95rem; }
+
+/* =========================================
+   VIDEO / QUOTE / CLOSING
+   ========================================= */
+.bs-video-wrap { max-width: 640px; margin: 3rem auto 0; }
+.bs-video-wrap video { width: 100%; border-radius: 10px; border: 4px solid var(--card-bg); outline: 1px solid var(--gold); box-shadow: 0 16px 32px rgba(90,70,30,0.15); }
+
+.bs-quote-section {
+    position: relative;
+    padding: 7rem 2rem;
+    text-align: center;
+    color: #fdf8ee;
+    background-size: cover;
+    background-position: center;
+}
+.bs-quote-section::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(20,16,10,0.75), rgba(20,16,10,0.6));
+}
+.bs-quote-inner { position: relative; max-width: 780px; margin: 0 auto; }
+.bs-quote-script { font-family: 'Sacramento', cursive; font-size: clamp(2rem, 5vw, 3rem); color: #f1e2bd; margin-bottom: 1.25rem; }
+.bs-quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3.2vw, 2.1rem); line-height: 1.45; }
+.bs-quote-text .hl { color: #f1e2bd; }
+
+/* =========================================
+   REVEAL ANIMATION
+   ========================================= */
+.bs-reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.bs-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+    .bs-reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+}
+
+/* small emoji wiggle on hover, kept subtle */
+.bs-card:hover .bs-card-icon { animation: bs-wiggle 0.6s ease; }
+@keyframes bs-wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-8deg); }
+    75% { transform: rotate(8deg); }
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .container { padding: 3.5rem 1.5rem; }
+    nav { padding: 1.1rem 1.5rem; }
+    .nav-links { gap: 1.1rem; font-size: 0.72rem; }
+    .bs-split { flex-direction: column; }
+    .bs-split.reverse { flex-direction: column; }
+    .bs-hero { padding-top: 7rem; }
+    .bs-hero-frame { top: 0.75rem; left: 0.75rem; right: 0.75rem; bottom: 0.75rem; }
+}
