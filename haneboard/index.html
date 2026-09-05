@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hane Board | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=5">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>PORTFOLIO</strong></div>
+            <div class="nav-links">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container pt-nav project-header">
+        <a href="../index.html#projects" class="back-link">
+            <span>&larr;</span> Back to Projects
+        </a>
+
+        <h1>Hane Board: Puzzle Training System</h1>
+        
+        <div class="tech-tags">
+            <span class="tag tag-highlight">Completed 2026</span>
+            <span class="tag">C++</span>
+            <span class="tag">Platform IO</span>
+            <span class="tag">Mechanical</span>
+            <span class="tag">Electrical</span>
+            <span class="tag">3D Printing</span>
+        </div>
+
+        <p class="text-grey" style="max-width: 800px; margin-bottom: 1.5rem;">
+            A tactile puzzle training system designed to prepare neurodivergent workers for the fast-paced Food & Beverage industry by breaking down complex workflows.
+        </p>
+    </section>
+
+    <section class="container" style="padding-top: 0; padding-bottom: 0;">
+        <div class="hero-image-large">
+            <img src="photos/cp01_group.jpg" alt="Hane Board System">
+        </div>
+
+        <div class="specs-container">
+            <div class="specs-title">Specifications</div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Microcontroller</h4>
+                    <p>ESP32-S3</p>
+                </div>
+                <div class="spec-item">
+                    <h4>I/O Expansion</h4>
+                    <p>PCF8574 (I2C Protocol)</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Actuation</h4>
+                    <p>Solenoids driven by MOSFETs</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Sensing</h4>
+                    <p>LDR (Light Dependent Resistor) Matrix</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="flex-split">
+            <div class="flex-content">
+                <h2>Bridging the Gap in Training</h2>
+                <p class="text-grey" style="text-align: justify;">
+                    Flour Power SG is an inclusive F&B organisation that trains 
+                    and employs persons with disabilities. Through this collaboration, 
+                    we found that neurodivergent workers can find traditional training 
+                    methods overwhelming. Hané Board turns F&B workflows into physical 
+                    puzzle-based tasks, creating an engaging way for users to build muscle 
+                    memory, stay motivated, work independently, and reduce supervisor workload.
+                </p>
+            </div>
+            <div class="flex-image">
+                <img src="photos/hanegrp.jpg" alt="Tactile Training Interface">
+                <div class="image-caption">System testing with target users.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div style="margin-bottom: 3rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">The Concept: Workflow</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="project-img placeholder-box" style="border-radius: 8px; border: 1px solid #333333; height: 200px;">
+                    <img src="photos/hanestep1.png" alt="Step 1: Receive Order" style="object-fit: cover;">
+                </div>
+                <div class="step-number">01</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Receive Order</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    The cashier inputs an order, and Hané Board releases the matching puzzle piece for the task into the tray.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="project-img placeholder-box" style="border-radius: 8px; border: 1px solid #333333; height: 200px;">
+                    <img src="photos/hanestep2.png" alt="Step 2: Guided Assembly" style="object-fit: cover;">
+                </div>
+                <div class="step-number">02</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Guided Assembly</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    The worker collects the piece and views a clear, step-by-step visual breakdown on the digital UI to complete the physical task.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="project-img placeholder-box" style="border-radius: 8px; border: 1px solid #333333; height: 200px;">
+                    <img src="photos/hanestep3.png" alt="Step 3: Satisfying Snap" style="object-fit: cover;">
+                </div>
+                <div class="step-number">03</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Satisfying Snap</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    After completing the task, the worker snaps the piece back into the board. The system records the completion and
+                    updates their colour mastery level, helping them track progress and stay motivated.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+            
+            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Electrical Architecture</h2>
+            
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100%; max-width: 400px; border-radius: 8px;">
+                    <img src="photos/electronics.jpg" alt="Electrical Hardware Setup" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <ul style="list-style-position: outside; margin-left: 1.5rem;">
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">ESP32-S3 Main Controller:</strong> Controls the full system, including puzzle detection, solenoid dispensing, and communication with the web-based UI.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">PCF8574 I2C GPIO Expander:</strong> Expands the ESP32-S3’s available pins to connect multiple LDR sensors.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">LDR Detection Matrix:</strong> Each puzzle slot uses an LDR to sense light changes. When a piece blocks the light, the system detects it as placed; when light reaches the sensor, it detects that the piece is removed.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Solenoids (6V, 2A):</strong> Solenoids are used to physically release the puzzle pieces into the tray when a task is assigned.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">FQP30N06L N-channel MOSFET:</strong> Acts as a high-current switch, allowing the ESP32-S3 to safely control the 6V 2A solenoids without powering them directly.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">1N4007 flyback diode:</strong> Solenoids are inductive loads that create a dangerous voltage spike when switched off. A flyback diode is placed across each solenoid to absorb this kickback and protect the ESP32-S3 from electrical damage.
+                    </li>
+                    <li class="text-grey" style="text-align: justify;">
+                        <strong style="color: #ffffff;">100µF decoupling capacitor:</strong> Decoupling capacitors are added near the solenoid power circuits to smooth out sudden current drops when the solenoids activate, keeping the logic-level electronics stable.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+            
+            <h2 style="text-align: center; margin-bottom: 4rem; font-size: 2.5rem;">Mechanical Integration</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3.5rem; max-width: 1100px; margin: 0 auto;">
+                
+                <div style="display: flex; flex-direction: column;">
+                    <h3 style="color: #ffffff; font-size: 1.25rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; text-align: center;">Version 1.0</h3>
+                    
+                    <div style="width: 100%; border-radius: 8px; margin-bottom: 2rem; display: flex; justify-content: center;">
+                        <img src="photos/frame1.png" alt="Mechanical Integration V1" style="width: 100%; max-width: 450px; height: 350px; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                    </div>
+
+                    <ul style="list-style-position: outside; margin-left: 1.2rem; padding: 0;">
+                        <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                            <strong style="color: #ffffff;">Frame Connection Tabs:</strong> Small rectangular tabs were added to connect the central mechanism securely to the outer frame.
+                        </li>
+                        <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                            <strong style="color: #ffffff;">Print-Sized Middle Plate:</strong>The central plate was made smaller so it could fit within the Bambu 3D printer’s build volume, making the part easier to fabricate.
+                        </li>
+                        <li class="text-grey" style="text-align: justify;">
+                            <strong style="color: #ffffff;">Reinforcement Ribs:</strong> Structural ribs were added across the frame to strengthen the connections and reduce flexing during use.
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="display: flex; flex-direction: column;">
+                    <h3 style="color: #ffffff; font-size: 1.25rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; text-align: center;">Version 2.0</h3>
+                    
+                    <div style="width: 100%; border-radius: 8px; margin-bottom: 2rem; display: flex; justify-content: center;">
+                        <img src="photos/frame2.png" alt="Mechanical Integration V2" style="width: 100%; max-width: 450px; height: 350px; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                    </div>
+
+                    <ul style="list-style-position: outside; margin-left: 1.2rem; padding: 0;">
+                        <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                            <strong style="color: #ffffff;">Diagonal Side-Constrained Connectors:</strong> The small rectangular connection tabs were moved to the sides to better constrain both vertical and horizontal movement.
+                        </li>
+                        <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                            <strong style="color: #ffffff;">Stronger Central Mounting Area:</strong> The middle frame was designed as a more solid structure to strengthen the mounting points for the LDR sensors and solenoids.
+                        </li>
+                        <li class="text-grey" style="text-align: justify;">
+                            <strong style="color: #ffffff;">Optimized Light Isolation Wells:</strong> Empty spaces were kept around the sides of the central frame to allow easier wiring and electronics connection.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>Engineering Challenges</h2>
+        </div>
+        
+        <div class="challenge-grid">
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Weak Puzzle Dispensing Force</h3>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    During prototyping, we tested electromagnets to release the components, but the repelling force generated was far too weak to push out the magnetic puzzle pieces from their holding tracks.
+                </p>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    We pivoted to solenoids. The physical plunger action provided a much stronger, positive mechanical push that cleared the track smoothly for piece dispensing.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Strong Magnetic Resistance</h3>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    The magnets embedded inside the physical puzzle pieces were too strong when resting directly against the metal dispensing core, making it difficult for the solenoid plunger to push out the piece.
+                </p>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    We 3D-printed a custom internal spacer to create a distance between the solenoid face and the puzzle piece magnet, reducing the magnet strength to allow puzzle piece dispensing.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Solenoid Power Constraints</h3>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    We chose 6V solenoids to keep the system compatible with common power-bank options, but we overlooked the increase in current. Our power bank could not supply 2A directly.
+                </p>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    We added FQP30N06L MOSFET drivers to act as high-current switches, allowing the microcontroller to safely turn on the solenoids using a separate power path.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Ambient Light Interference</h3>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    The LDR sensor matrix was highly vulnerable to shifting room lighting environments, causing inconsistent puzzle placement detection.
+                </p>
+                
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    We tuned the LDR module’s sensitivity using its built-in variable resistor and added a 2-second confirmation delay in code before registering a puzzle piece as fully returned.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

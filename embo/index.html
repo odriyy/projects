@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBO System | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=5">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>PORTFOLIO</strong></div>
+            <div class="nav-links">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container pt-nav project-header">
+        <a href="../index.html#projects" class="back-link">
+            <span>&larr;</span> Back to Projects
+        </a>
+
+        <h1>EMBO: Embolization Particle Sizing System</h1>
+
+        <div class="tech-tags">
+            <span class="tag tag-highlight">Completed 2026</span>
+            <span class="tag">PCB Design</span>
+            <span class="tag">ESP32-S3</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Ultrasonics</span>
+            <span class="tag">Medical Device</span>
+        </div>
+
+        <p class="text-grey" style="max-width: 800px; margin-bottom: 1.5rem;">
+            A closed-loop medical device that automates and quality-controls the preparation of gelatin foam embolic agents for interventional radiology, using real-time computer vision and ultrasound sensing to measure and control particle size.
+        </p>
+
+        <a href="https://github.com/markantosa/embo" target="_blank" class="btn-outline">
+            View on GitHub
+        </a>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 0;">
+        <div class="hero-image-large">
+            <img src="photos/embo_hero.png" alt="EMBO Sheet Metal Case Render">
+        </div>
+
+        <div class="specs-container">
+            <div class="specs-title">Specifications</div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Microcontroller</h4>
+                    <p>ESP32-S3-WROOM-1-N4</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Motor Control</h4>
+                    <p>2x TMC2209 stepper drivers</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Sensing</h4>
+                    <p>1MHz ultrasound attenuation + YOLOv8 computer vision</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Target Range</h4>
+                    <p>50-1000 &micro;m particle size, adjustable per procedure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="flex-split">
+            <div class="flex-content">
+                <h2>From Slurry to Certainty</h2>
+                <p class="text-grey" style="text-align: justify;">
+                    Embolization procedures use tiny gelatin foam particles to deliberately block blood vessels,
+                    treating tumours, fibroids, and bleeding. Before every procedure, a clinician manually prepares
+                    the particle slurry by pumping two syringes back and forth until it reaches a "pudding consistency"
+                    &mdash; a method unchanged since the 1970s, with no measurement and no standard. Particle size directly
+                    affects clinical outcomes, and two clinicians performing the same prep can produce very different
+                    distributions. EMBO replaces this manual process with a sensor-guided system that measures and
+                    controls particle size in real time.
+                </p>
+            </div>
+            <div class="flex-image">
+                <img src="photos/embogrp.jpg" alt="Team EMBO at exhibition">
+                <div class="image-caption">Final prototype at the SUTD engineering exhibition.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div style="margin-bottom: 3rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">The Concept: Closed-Loop Preparation</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="project-img placeholder-box" style="border-radius: 8px; border: 1px solid #333333; height: 200px;">
+                    <img src="photos/embo_iso.png" alt="Step 1: Automated Mixing" style="object-fit: cover;">
+                </div>
+                <div class="step-number">01</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Automated Mixing</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    Two stepper motors drive syringe plungers back and forth with precise speed, stroke, and cycle control, replacing manual pumping.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="project-img placeholder-box" style="border-radius: 8px; border: 1px solid #333333; height: 200px;">
+                    <img src="photos/embo_microscope_clamp.jpg" alt="Step 2: Real-Time Sizing" style="object-fit: cover;">
+                </div>
+                <div class="step-number">02</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Real-Time Sizing</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    A Raspberry Pi 5 running YOLOv8 tracks particle size and IQR via microscope camera, while a 1MHz ultrasound signal chain measures slurry attenuation as a second, independent estimate.
+                </p>
+            </div>
+
+            <div class="project-card" style="background-color: transparent; border: none; padding: 0;">
+                <div class="project-img placeholder-box" style="border-radius: 8px; border: 1px solid #333333; height: 200px;">
+                    <img src="photos/embo_piezo_test.jpg" alt="Step 3: Automatic Stop" style="object-fit: cover;">
+                </div>
+                <div class="step-number">03</div>
+                <h3 class="project-title" style="margin-top: 0; font-size: 1.25rem;">Automatic Stop</h3>
+                <p class="text-grey" style="font-size: 0.95rem; text-align: justify;">
+                    A PID control loop on the ESP32-S3 adjusts stroke count based on live sensor feedback and halts mixing automatically once the clinician's target particle size is reached.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Electrical Architecture</h2>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem; gap: 2rem; flex-wrap: wrap;">
+                <div style="width: 100%; max-width: 400px; border-radius: 8px;">
+                    <img src="photos/embo_pcb_front.jpg" alt="Main Controller PCB v3.4" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                    <div class="image-caption">Main controller PCB v3.4, 3D render.</div>
+                </div>
+                <div style="width: 100%; max-width: 400px; border-radius: 8px;">
+                    <img src="photos/embo_pcb_wired.jpg" alt="Fabricated PCB wired up" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                    <div class="image-caption">Fabricated board, wired and under bring-up test.</div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic1.png" alt="Power distribution schematic" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p class="text-grey" style="font-size: 0.95rem; text-align: center; margin-top: 0.75rem;">Power distribution from 24V (motors) to 5V (sensors) and 3.3V (logic).</p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic2.png" alt="Ultrasonic attenuation spectroscopy schematic" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p class="text-grey" style="font-size: 0.95rem; text-align: center; margin-top: 0.75rem;">Ultrasonic attenuation spectroscopy signal chain.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic3.png" alt="Analog front-end schematic" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p class="text-grey" style="font-size: 0.95rem; text-align: center; margin-top: 0.75rem;">Analog front-end designed to capture high-frequency attenuation data with minimal noise.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100%; max-width: 800px;">
+                    <img src="photos/embo_schematic4.png" alt="Core processing unit schematic" style="width: 100%; height: auto; border: 1px solid #333333;">
+                    <p class="text-grey" style="font-size: 0.95rem; text-align: center; margin-top: 0.75rem;">Core processing unit layout, highlighting data lines reserved for external communication.</p>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <ul style="list-style-position: outside; margin-left: 1.5rem;">
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">ESP32-S3-WROOM-1-N4 Main Controller:</strong> Runs the PID control loop, drives both stepper motors, manages the ultrasound signal chain, and interfaces with the TFT touchscreen UI and Raspberry Pi.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">2x TMC2209 Stepper Drivers:</strong> Field-replaceable plug-in modules that drive the two syringe plungers via UART, with StallGuard providing an indirect force-feedback signal.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Ultrasound Signal Chain:</strong> An AD9833 DDS generates a 1MHz sine wave, amplified by an OPA2354 Tx stage (G=4.9) and driven through a transducer; the received signal passes through a two-stage OPA2354 Rx amplifier (100x gain) and a BAT54 envelope detector before reaching the ADC.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Turbidity Sensing:</strong> An APDS9960 measures ALS transmission and a MAX30102 measures backscatter, giving a second, optical estimate of slurry turbidity independent of the acoustic path.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Force Sensing:</strong> Two load cells with HX711 24-bit amplifiers sit at each syringe plunger contact point, acting as a hardware fallback if the TMC2209's UART-based StallGuard reading proves unreliable.
+                    </li>
+                    <li class="text-grey" style="text-align: justify;">
+                        <strong style="color: #ffffff;">GPIO Protection Resistors:</strong> 220&Omega; resistors were added on every ESP32-to-TMC2209 control line in v3.4 after a hot-swap/spark incident damaged an earlier fabricated board.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Sensing System</h2>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100%; max-width: 500px; border-radius: 8px;">
+                    <img src="photos/embo_display_breakout.png" alt="Display breakout board 3D view" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; border: 1px solid #333333;">
+                    <div class="image-caption">Display breakout board: ILI9341 TFT + XPT2046 touch, connected via 20-pin IDC ribbon.</div>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <ul style="list-style-position: outside; margin-left: 1.5rem;">
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Computer Vision:</strong> A USB 2.0 microscope camera clamped to the syringe feeds frames to a YOLOv8 model trained on gelatin foam particles, running on a Raspberry Pi 5. It reports median particle diameter and IQR back to the ESP32-S3 over UART at 921600 baud.
+                    </li>
+                    <li class="text-grey" style="margin-bottom: 1rem; text-align: justify;">
+                        <strong style="color: #ffffff;">Diffused Backlight:</strong> An LED panel backlights the syringe to maximize particle contrast for the vision pipeline.
+                    </li>
+                    <li class="text-grey" style="text-align: justify;">
+                        <strong style="color: #ffffff;">Particle Size Model:</strong> Mixing follows first-order breakage kinetics, D(N) = D_min + (D&#8320; &minus; D_min) &times; e<sup>-kN</sup>, where N is stroke count and k is an empirically measured shear constant. The PID loop uses live D(N) measurements to schedule remaining strokes.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>Engineering Challenges</h2>
+        </div>
+
+        <div class="challenge-grid">
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">No Existing Measurement Standard</h3>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    Gelfoam preparation has been done by manual syringe pumping since the 1970s, with no device measuring particle size during the process, and no baseline data to calibrate against.
+                </p>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    We built two independent sensing modalities &mdash; computer vision and ultrasound attenuation &mdash; and empirically fit a first-order breakage kinetics model to relate stroke count to particle size, giving the PID loop a measurable target to control against.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">GPIO Damage from Hot-Swapping</h3>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    Hot-swapping a TMC2209 module on the fabricated v2.51 board caused a spark that damaged the ESP32-S3's GPIO lines, halting bring-up.
+                </p>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    In v3.4 we added 220&Omega; protection resistors on every ESP32-to-TMC2209 control line, an 8A on-board backstop fuse, and reverse polarity protection to harden the board against future incidents.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">Shared SPI Bus Conflicts</h3>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    The AD9833 signal generator, ILI9341 display, and XPT2046 touch controller all share the SPI2 bus, but each requires a different SPI mode and clock speed.
+                </p>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    Each peripheral's library switches SPI mode per transaction via <code>SPI.beginTransaction()</code>, letting all three devices safely share the bus without cross-talk.
+                </p>
+            </div>
+
+            <div class="challenge-box">
+                <h3 style="margin-bottom: 0;">HX711 Timing Sensitivity</h3>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Problem</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    The two HX711 load cell amplifiers share a single clock line, but standard HX711 libraries assume one dedicated clock per chip, and the chip powers itself down if its clock pin sits high for more than ~60&micro;s.
+                </p>
+
+                <h4 style="color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">The Solution</h4>
+                <p class="text-grey" style="text-align: justify; margin: 0;">
+                    We wrote a custom shared-clock, per-channel bit-bang driver pinned to a dedicated core with short critical sections, keeping both channels readable without either chip powering down mid-read.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
